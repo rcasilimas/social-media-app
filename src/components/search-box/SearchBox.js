@@ -1,12 +1,14 @@
 import React from 'react';
+import './search-box.scss'
 
 const SearchBox = ({ searchfield, searchChange }) => {
   return (
-    <div className='pa2'>
+    <div className='search-box-container'>
       <input
+        style={{width: '25%'}}
         className='pa3 ba b--green bg-lightest-blue'
         type='search'
-        placeholder='search robots'
+        placeholder='Search Robots'
         onChange={searchChange}
       />
     </div>

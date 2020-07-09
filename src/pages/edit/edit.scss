@@ -1,0 +1,35 @@
+.edit-page-background {
+    display: flex;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+
+    .exit-container {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        cursor: pointer;
+        margin-right: 15px;
+        margin-bottom: 30px;
+    }
+
+    .edit-popup {
+        position: absolute;
+        background-color: whitesmoke;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1em;
+        width: 600px;
+        height: 600px;
+
+        .edit-form {
+            overflow: hidden;
+        }
+    }
+}

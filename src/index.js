@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider, connect} from 'react-redux';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import thunkMiddleware from 'redux-thunk'
-import './index.css';
-import App from './containers/App';
+import {Provider} from 'react-redux';
+import './index.css'
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import {persistor, store} from './redux/store';
 import registerServiceWorker from './registerServiceWorker';
+import { PersistGate } from 'redux-persist/integration/react';
 import 'tachyons';
-import { searchRobots, requestRobots } from './reducers';
-import { createLogger } from 'redux-logger'
 
-const logger = createLogger();
-
-const rootReducer = combineReducers({ searchRobots, requestRobots })
-const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
-
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <BrowserRouter>
+                <App />
+        </BrowserRouter>
+    </Provider>, document.getElementById('root'));
 registerServiceWorker();

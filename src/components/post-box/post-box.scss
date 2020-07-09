@@ -1,0 +1,18 @@
+.post-box-container {
+    padding: 20px 0;
+    border-bottom: 1px dotted black;
+
+    .post-box-form {
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .post-box {
+            font-size: 110%;
+            height: 60px;
+            padding: 0 20px;
+            width: 60%;
+        }
+    }
+}
